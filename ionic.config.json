@@ -1,0 +1,7 @@
+{
+  "name": "SegmentBug",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
