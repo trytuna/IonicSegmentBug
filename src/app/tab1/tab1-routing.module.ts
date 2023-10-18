@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  }
+  },
+  {
+    path: 'bug',
+    loadChildren: () => import('../bug/bug.module').then((m) => m.BugPageModule),
+  },
 ];
 
 @NgModule({

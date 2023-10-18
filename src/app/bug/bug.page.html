@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs" text="Back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Segment Bug</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>  
+    <ion-segment
+      #weekdaySegment
+      scrollable="true"
+      [(ngModel)]="selectedWeekday"
+    >
+      <ion-segment-button *ngFor="let weekday of weekdays; let i = index" [value]="weekday" layout="icon-start">
+        <ion-label>
+          {{ weekday?.en }}
+        </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">bug</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
