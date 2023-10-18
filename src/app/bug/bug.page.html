@@ -9,7 +9,7 @@
   <ion-toolbar>  
     <ion-segment
       #weekdaySegment
-      scrollable="true"
+      [scrollable]="true"
       [(ngModel)]="selectedWeekday"
     >
       <ion-segment-button *ngFor="let weekday of weekdays; let i = index" [value]="weekday" layout="icon-start">
